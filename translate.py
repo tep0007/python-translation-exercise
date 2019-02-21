@@ -39,7 +39,12 @@ def get_reverse(sequence):
 
     If `sequence` is empty, and empty string is returned.
     """
-    pass
+
+
+    if sequence:
+        return sequence[::-1] 
+    else:
+        return ""
 
 def get_complement(sequence):
     """Get the complement of `sequence`.
@@ -48,7 +53,18 @@ def get_complement(sequence):
 
     If `sequence` is empty, and empty string is returned.
     """
-    pass
+    comp={"G":"C", "C":"G", "U":"A", "A":"U"}
+    
+    ment=str()
+    
+    if sequence==0:
+        return ""
+    else:
+        for letter in sequence: 
+            if letter in comp.keys():
+                ment=ment+comp[letter]
+        return ment
+        
 
 def reverse_and_complement(sequence):
     """Get the reversed and complemented form of `sequence`.
